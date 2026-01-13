@@ -16,3 +16,5 @@ See [variables.go](./First-program/variables.go) for examples of variable declar
 ### 2. Conditional Statements & Switch
 See [conditionals.go](./First-program/conditionals.go) for examples of If/Else logic and Switch statements.
 
+### 3. Functions
+See [Function.go](./Second-program/Function/Function.go) for examples of function declaration, parameters, and return values.
