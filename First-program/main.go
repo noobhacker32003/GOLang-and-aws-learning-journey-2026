@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello, World!")
+	a := 10
+	b := 20
+	sum := a + b
+
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(sum)
+}
