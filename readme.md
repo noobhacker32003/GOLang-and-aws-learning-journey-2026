@@ -11,8 +11,8 @@ I am documenting my journey learning Go (Golang).
 ## Learned Topics
 
 ### 1. Variables
-See [variables.go](./First-program/variables.go) for examples of variable declaration and usage.
+See [variables.go](./First-program/variables) for examples of variable declaration and usage.
 
 ### 2. Conditional Statements & Switch
-See [conditionals.go](./First-program/conditionals.go) for examples of If/Else logic and Switch statements.
+See [conditionals.go](./First-program/conditionals) for examples of If/Else logic and Switch statements.
 
