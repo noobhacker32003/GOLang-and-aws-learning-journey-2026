@@ -13,6 +13,10 @@ func subtract(p1 int, p2 int) int {
 	return p1 - p2
 }
 
+func operate(p1 int, p2 int) (int, int) {
+	return p1 + p2, p1 - p2
+}
+
 func main() {
 	fmt.Println("Hello, That's my first function")
 
@@ -22,4 +26,7 @@ func main() {
 
 	result := subtract(10, 5)
 	fmt.Println(result)
+
+	sumRes, subRes := operate(10, 5)
+	fmt.Println(sumRes, subRes)
 }
