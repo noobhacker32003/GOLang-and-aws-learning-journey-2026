@@ -1,0 +1,8 @@
+GO is a compile language.
+Run fast 
+
+Go Code runs Line by Line__
+
+GO code compile first -> then machine Code -> Load at RAM -> Execution AT CPU
+
+
