@@ -69,6 +69,27 @@ func TestCalculateTotals(t *testing.T) {
 	if !equal(got, want) {
 		t.Errorf("got %v but wanted %v", got, want)
 	}
+
+	t.Run("single player", func(t *testing.T) {
+	player1 := []int{100, 200, 300}
+	
+	got := CalculateTotals(player1)
+	want := []int{600}
+	
+	if !equal(got, want) {
+		t.Errorf("got %v but wanted %v", got, want)
+	}
+})
+
+t.Run("no players", func(t *testing.T) {
+	got := CalculateTotals()
+	want := []int{}
+	
+	if len(got) != len(want) {
+		t.Errorf("got %v but wanted empty slice", got)
+	}
+})
+	
 }
 
 // Helper function to compare slices
@@ -83,3 +104,4 @@ func equal(a, b []int) bool {
 	}
 	return true
 }
+
