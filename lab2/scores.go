@@ -27,3 +27,13 @@ func CalculateTotal(scores []int) int {
 	}
 	return total
 }
+
+func CalculateTotals(playerScores ...[]int) []int {
+	totals := make([]int, len(playerScores))
+
+	for i, scores := range playerScores {
+		totals[i] = CalculateTotal(scores)
+	}
+
+	return totals
+}

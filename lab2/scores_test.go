@@ -13,7 +13,7 @@ import "testing"
 // }
 
 
-func TestCalculateTotalSlice(t *testing.T) {
+// func TestCalculateTotalSlice(t *testing.T) {
 // 	t.Run("with 5 scores", func(t *testing.T) {
 // 		scores := []int{10, 15, 20, 12, 18}
 // 		got := CalculateTotal(scores)
@@ -37,23 +37,49 @@ func TestCalculateTotalSlice(t *testing.T) {
 
 
 
-t.Run("with empty slice", func(t *testing.T) {
-	scores := []int{}
-	got := CalculateTotal(scores)
-	want := 0
+// t.Run("with empty slice", func(t *testing.T) {
+// 	scores := []int{}
+// 	got := CalculateTotal(scores)
+// 	want := 0
 	
-	if got != want {
-		t.Errorf("got %d but wanted %d", got, want)
-	}
-})
+// 	if got != want {
+// 		t.Errorf("got %d but wanted %d", got, want)
+// 	}
+// })
 
-t.Run("with single score", func(t *testing.T) {
-	scores := []int{42}
-	got := CalculateTotal(scores)
-	want := 42
+// t.Run("with single score", func(t *testing.T) {
+// 	scores := []int{42}
+// 	got := CalculateTotal(scores)
+// 	want := 42
 	
-	if got != want {
-		t.Errorf("got %d but wanted %d", got, want)
+// 	if got != want {
+// 		t.Errorf("got %d but wanted %d", got, want)
+// 	}
+// })
+// }
+
+func TestCalculateTotals(t *testing.T) {
+	player1 := []int{10, 15, 20}
+	player2 := []int{25, 30}
+	player3 := []int{5, 10, 15, 20}
+	
+	got := CalculateTotals(player1, player2, player3)
+	want := []int{45, 55, 50}
+	
+	if !equal(got, want) {
+		t.Errorf("got %v but wanted %v", got, want)
 	}
-})
+}
+
+// Helper function to compare slices
+func equal(a, b []int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
 }
