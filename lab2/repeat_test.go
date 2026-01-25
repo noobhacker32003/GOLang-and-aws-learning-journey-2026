@@ -17,3 +17,17 @@ func BenchmarkRepeat(b *testing.B) {
 	}
 }
 
+func TestRepeatBuilder(t *testing.T) {
+	got := RepeatBuilder("Go! ", 3)
+	want := "Go! Go! Go! "
+	
+	if got != want {
+		t.Errorf("got %q but wanted %q", got, want)
+	}
+}
+
+func BenchmarkRepeatBuilder(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RepeatBuilder("Go! ", 5)
+	}
+}
