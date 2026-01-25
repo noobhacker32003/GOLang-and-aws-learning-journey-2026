@@ -58,6 +58,19 @@ import "testing"
 // })
 // }
 
+func TestCalculateAverages(t *testing.T) {
+	player1 := []int{}
+	player2 := []int{25, 35}
+	player3 := []int{5, 15, 25, 35}		
+
+	got := CalculateAverages(player1, player2, player3)
+	want := []int{0, 30, 20}
+
+	if !equal(got, want) {
+		t.Errorf("got %v but wanted %v", got, want)
+	}
+
+}
 func TestCalculateTotals(t *testing.T) {
 	player1 := []int{10, 15, 20}
 	player2 := []int{25, 30}
@@ -79,6 +92,9 @@ func TestCalculateTotals(t *testing.T) {
 	if !equal(got, want) {
 		t.Errorf("got %v but wanted %v", got, want)
 	}
+
+
+
 })
 
 t.Run("no players", func(t *testing.T) {

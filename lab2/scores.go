@@ -37,3 +37,17 @@ func CalculateTotals(playerScores ...[]int) []int {
 
 	return totals
 }
+
+func CalculateAverages(playerScores ...[]int) []int {
+	averages := make([]int, len(playerScores))
+	for i, scores := range playerScores {
+		if len(scores) == 0 {
+			averages[i] = 0
+		} else {
+			total := CalculateTotal(scores)
+			averages[i] = total / len(scores)
+		}
+	}
+
+	return averages
+}
