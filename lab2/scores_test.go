@@ -133,4 +133,28 @@ func TestBestRounds(t *testing.T) {
 			t.Errorf("got %v but wanted %v", got, want)
 		}
 	})
+
+
+	t.Run("edge case: player with only warm-up", func(t *testing.T) {
+	player1 := []int{10}  // Only warm-up, no actual rounds
+	
+	got := BestRounds(player1)
+	want := []int{0}
+	
+	if !equal(got, want) {
+		t.Errorf("got %v but wanted %v", got, want)
+	}
+	})
+
+	t.Run("edge case: empty slice", func(t *testing.T) {
+		player1 := []int{}
+		
+		got := BestRounds(player1)
+		want := []int{0}
+		
+		if !equal(got, want) {
+			t.Errorf("got %v but wanted %v", got, want)
+		}
+	})
+
 }
