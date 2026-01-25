@@ -1,5 +1,6 @@
 package tournament
 import "strings"
+
 func Repeat(text string, count int) string {
 	var result string
 	for i := 0; i < count; i++ {
@@ -7,8 +8,6 @@ func Repeat(text string, count int) string {
 	}
 	return result
 }
-
-
 
 func RepeatBuilder(text string, count int) string {
 	var builder strings.Builder

@@ -12,7 +12,6 @@ import "testing"
 // 	}
 // }
 
-
 // func TestCalculateTotalSlice(t *testing.T) {
 // 	t.Run("with 5 scores", func(t *testing.T) {
 // 		scores := []int{10, 15, 20, 12, 18}
@@ -34,8 +33,6 @@ import "testing"
 // 		}
 // 	})
 // }
-
-
 
 // t.Run("with empty slice", func(t *testing.T) {
 // 	scores := []int{}
