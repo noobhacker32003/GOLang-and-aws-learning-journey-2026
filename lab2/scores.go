@@ -51,3 +51,33 @@ func CalculateAverages(playerScores ...[]int) []int {
 
 	return averages
 }
+
+func BestRounds(playerScores ...[]int) []int {
+	bestScores := make([]int, len(playerScores))
+	
+	for i, scores := range playerScores {
+		bestScores[i] = findMaxFromActualRounds(scores)
+	}
+	
+	return bestScores
+}
+
+func findMaxFromActualRounds(scores []int) int {
+	// Handle edge cases
+	if len(scores) == 0 || len(scores) == 1 {
+		return 0
+	}
+	
+	// Slice away the first element (warm-up round)
+	actualRounds := scores[1:]
+	
+	// Find the maximum
+	max := actualRounds[0]
+	for _, score := range actualRounds {
+		if score > max {
+			max = score
+		}
+	}
+	
+	return max
+}

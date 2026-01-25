@@ -120,3 +120,17 @@ func equal(a, b []int) bool {
 	}
 	return true
 }
+
+func TestBestRounds(t *testing.T) {
+	t.Run("normal cases", func(t *testing.T) {
+		player1 := []int{5, 10, 15, 20}   // Warm-up: 5, best: 20
+		player2 := []int{30, 25, 35}      // Warm-up: 30, best: 35
+		
+		got := BestRounds(player1, player2)
+		want := []int{20, 35}
+		
+		if !equal(got, want) {
+			t.Errorf("got %v but wanted %v", got, want)
+		}
+	})
+}
