@@ -1,0 +1,6 @@
+Learning Outcomes :
+Structs group related fields into a single type
+Create structs with Type{Field: value} syntax
+Access fields with dot notation: struct.Field
+Structs are value types - copies are independent
+Use named fields for clarity
