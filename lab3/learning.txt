@@ -4,3 +4,6 @@ Create structs with Type{Field: value} syntax
 Access fields with dot notation: struct.Field
 Structs are value types - copies are independent
 Use named fields for clarity
+
+
+In Go, the syntax func (r Rectangle) Area() defines a method called Area that is attached to the Rectangle type. Here, r is the receiver variable, which works similarly to this or self in other programming languages. It represents the specific instance the method is called on. By convention, the receiver variable is usually a short, lowercase version of the type name (for example, r for Rectangle, c for Circle).
