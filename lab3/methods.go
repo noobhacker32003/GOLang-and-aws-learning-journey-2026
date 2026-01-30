@@ -8,8 +8,8 @@ type Rectangle struct {
 }
 
 // Function (standalone)
-func CalculateArea(r Rectangle) float64 {
-	return r.Width * r.Height
+func Area(r Rectangle) float64 {
+	return r.Width + r.Height
 }
 
 // Method (attached to type)
@@ -23,7 +23,7 @@ func main() {
 		Height: 10,
 	}
 
-	area1 := CalculateArea(rect) // Function call
+	area1 := Area(rect) // Function call
 	area2 := rect.Area()         // Method call
 
 	fmt.Println("Area using function:", area1)
